@@ -1,0 +1,42 @@
+@keyframes start {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* */
+
+.main-table table, th, tr, td {
+  font-family: 'Roboto Flex', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.274);
+  min-width: 100%;
+  text-align: center;
+  font-size: large;
+}
+
+table tr, td {
+  opacity: 0;
+  animation: start .4s;
+  animation-fill-mode: forwards;
+}
+
+table th {
+  padding: 10px;
+  background-image: linear-gradient(90deg, #172e44, #172e44);
+  background-color: rgb(19, 64, 116);
+}
+
+.main-table {
+  color: white;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 83.4vh;
+}
+
+html {
+  background-image: linear-gradient(90deg, rgb(19, 60, 85), rgb(56, 111, 164));
+}
+

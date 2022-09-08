@@ -1,0 +1,1020 @@
+{
+  "stats": {
+    "suites": 10,
+    "tests": 31,
+    "passes": 5,
+    "pending": 0,
+    "failures": 26,
+    "start": "2022-08-26T20:51:01.413Z",
+    "end": "2022-08-26T20:54:43.318Z",
+    "duration": 221905,
+    "testsRegistered": 34,
+    "passPercent": 14.705882352941178,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "9316ab19-68df-45f0-b4da-ffb2d01f7637",
+      "title": "",
+      "fullFile": "cypress/e2e/_requirements/00.RunAll.cy.js",
+      "file": "cypress/e2e/_requirements/00.RunAll.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1261ec36-2d6b-42e0-8295-061955ce37a1",
+          "title": "1 - Crie uma página inicial de login com os seguintes campos e características:",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A rota para esta página deve ser '/'",
+              "fullTitle": "1 - Crie uma página inicial de login com os seguintes campos e características: A rota para esta página deve ser '/'",
+              "timedOut": null,
+              "duration": 635,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.location('pathname').should('eq', '/');",
+              "err": {},
+              "uuid": "bfd77bd2-f710-4d37-8c34-03a6a18d6b75",
+              "parentUUID": "1261ec36-2d6b-42e0-8295-061955ce37a1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Crie um local para que o usuário insira seu email e senha",
+              "fullTitle": "1 - Crie uma página inicial de login com os seguintes campos e características: Crie um local para que o usuário insira seu email e senha",
+              "timedOut": null,
+              "duration": 172,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).should('exist');\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).should('exist');",
+              "err": {},
+              "uuid": "df9929c9-da36-44ae-9a0b-afb027d27980",
+              "parentUUID": "1261ec36-2d6b-42e0-8295-061955ce37a1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Crie um botão com o texto 'Entrar'",
+              "fullTitle": "1 - Crie uma página inicial de login com os seguintes campos e características: Crie um botão com o texto 'Entrar'",
+              "timedOut": null,
+              "duration": 219,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(/Entrar/i).should('exist');",
+              "err": {},
+              "uuid": "a1d5d167-9a3d-473b-aae9-6bd363211333",
+              "parentUUID": "1261ec36-2d6b-42e0-8295-061955ce37a1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Realize as seguintes verificações nos campos de email, senha e botão:",
+              "fullTitle": "1 - Crie uma página inicial de login com os seguintes campos e características: Realize as seguintes verificações nos campos de email, senha e botão:",
+              "timedOut": null,
+              "duration": 3201,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(/Entrar/i).should('be.disabled');\ncy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).type(_constants.INVALID_EMAIL_0);\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).type(_constants.VALID_PASSWORD);\ncy.contains(/Entrar/i).should('be.disabled');\ncy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).clear().type(_constants.INVALID_EMAIL_1);\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).clear().type(_constants.VALID_PASSWORD);\ncy.contains(/Entrar/i).should('be.disabled');\ncy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).clear().type(_constants.INVALID_EMAIL_2);\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).clear().type(_constants.VALID_PASSWORD);\ncy.contains(/Entrar/i).should('be.disabled');\ncy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).clear().type(_constants.INVALID_EMAIL_3);\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).clear().type(_constants.VALID_PASSWORD);\ncy.contains(/Entrar/i).should('be.disabled');\ncy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).clear().type(_constants.VALID_EMAIL);\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).clear().type(_constants.INVALID_PASSWORD);\ncy.contains(/Entrar/i).should('be.disabled');\ncy.getByTestId(_constants.EMAIL_INPUT_TEST_ID).clear().type(_constants.VALID_EMAIL);\ncy.getByTestId(_constants.PASSWORD_INPUT_TEST_ID).clear().type(_constants.VALID_PASSWORD);\ncy.contains(/Entrar/i).should('not.be.disabled');",
+              "err": {},
+              "uuid": "79a86991-c389-4a6e-8943-86f373261c40",
+              "parentUUID": "1261ec36-2d6b-42e0-8295-061955ce37a1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Salve o email no estado da aplicação, com a chave email, assim que o usuário logar.",
+              "fullTitle": "1 - Crie uma página inicial de login com os seguintes campos e características: Salve o email no estado da aplicação, com a chave email, assim que o usuário logar.",
+              "timedOut": null,
+              "duration": 10772,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "(0, _helperFunctions.logInWithValidCredentials)();\ncy.window().its('store').invoke('getState').its('user.email').should('eq', _constants.VALID_EMAIL);",
+              "err": {
+                "message": "CypressError: Timed out retrying after 10000ms: `cy.its()` errored because the property: `store` does not exist on your subject.\n\n`cy.its()` waited for the specified property `store` to exist, but it never did.\n\nIf you do not expect the property `store` to exist, then add an assertion such as:\n\n`cy.wrap({ foo: 'bar' }).its('quux').should('not.exist')`\n\nhttps://on.cypress.io/its",
+                "estack": "CypressError: Timed out retrying after 10000ms: `cy.its()` errored because the property: `store` does not exist on your subject.\n\n`cy.its()` waited for the specified property `store` to exist, but it never did.\n\nIf you do not expect the property `store` to exist, then add an assertion such as:\n\n`cy.wrap({ foo: 'bar' }).its('quux').should('not.exist')`\n\nhttps://on.cypress.io/its\n    at cypressErr (http://localhost:3000/__cypress/runner/cypress_runner.js:175319:18)\n    at Object.cypressErrByPath (http://localhost:3000/__cypress/runner/cypress_runner.js:175325:10)\n    at propertyNotOnSubjectErr (http://localhost:3000/__cypress/runner/cypress_runner.js:153931:83)\n    at traverseObjectAtPath (http://localhost:3000/__cypress/runner/cypress_runner.js:154018:24)\n    at getValue (http://localhost:3000/__cypress/runner/cypress_runner.js:154072:11)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:10286:29)\n    at retryValue (http://localhost:3000/__cypress/runner/cypress_runner.js:154112:65)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:10286:29)\n    at resolveValue (http://localhost:3000/__cypress/runner/cypress_runner.js:154119:65)\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise.attempt.Promise.try (http://localhost:3000/__cypress/runner/cypress_runner.js:10286:29)\n    at whenStable (http://localhost:3000/__cypress/runner/cypress_runner.js:167274:65)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:166728:14\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:11129:18)\n    at Promise._fulfill (http://localhost:3000/__cypress/runner/cypress_runner.js:11073:18)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:12687:46\nFrom Your Spec Code:\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:225:17)",
+                "diff": null
+              },
+              "uuid": "976db7e5-372e-4f2f-95ed-b7a2724ed5ff",
+              "parentUUID": "1261ec36-2d6b-42e0-8295-061955ce37a1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A rota deve ser mudada para '/carteira' após o clique no botão.",
+              "fullTitle": "1 - Crie uma página inicial de login com os seguintes campos e características: A rota deve ser mudada para '/carteira' após o clique no botão.",
+              "timedOut": null,
+              "duration": 880,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _helperFunctions.logInWithValidCredentials)();\ncy.location('pathname').should('eq', '/carteira');",
+              "err": {},
+              "uuid": "94919794-af37-42ab-b96b-135e9c55d885",
+              "parentUUID": "1261ec36-2d6b-42e0-8295-061955ce37a1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bfd77bd2-f710-4d37-8c34-03a6a18d6b75",
+            "df9929c9-da36-44ae-9a0b-afb027d27980",
+            "a1d5d167-9a3d-473b-aae9-6bd363211333",
+            "79a86991-c389-4a6e-8943-86f373261c40",
+            "94919794-af37-42ab-b96b-135e9c55d885"
+          ],
+          "failures": [
+            "976db7e5-372e-4f2f-95ed-b7a2724ed5ff"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 15879,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "bca1ee07-479a-4d92-8cf5-c75eb1a89a9f",
+          "title": "2 - Crie um header para a página de carteira contendo as seguintes características:",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Um elemento que exiba o email do usuário que fez login.",
+              "fullTitle": "2 - Crie um header para a página de carteira contendo as seguintes características: Um elemento que exiba o email do usuário que fez login.",
+              "timedOut": null,
+              "duration": 10756,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.EMAIL_FIELD_TEST_ID).should('contain', _constants.VALID_EMAIL);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"email-field\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"email-field\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:265:52)",
+                "diff": null
+              },
+              "uuid": "a19f7371-b506-4b3c-82b9-5cc6f5670c88",
+              "parentUUID": "bca1ee07-479a-4d92-8cf5-c75eb1a89a9f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Crie um campo com a despesa total gerada pela lista de gastos.",
+              "fullTitle": "2 - Crie um header para a página de carteira contendo as seguintes características: Crie um campo com a despesa total gerada pela lista de gastos.",
+              "timedOut": null,
+              "duration": 10851,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.TOTAL_FIELD_TEST_ID).should('contain', '0');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"total-field\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"total-field\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:268:52)",
+                "diff": null
+              },
+              "uuid": "62fa0800-c80f-458b-a396-06c586066b4c",
+              "parentUUID": "bca1ee07-479a-4d92-8cf5-c75eb1a89a9f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Crie um campo que mostre que qual câmbio está sendo utilizado, que será neste caso 'BRL'",
+              "fullTitle": "2 - Crie um header para a página de carteira contendo as seguintes características: Crie um campo que mostre que qual câmbio está sendo utilizado, que será neste caso 'BRL'",
+              "timedOut": null,
+              "duration": 10828,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.HEADER_CURRENCY_FIELD_TEST_ID).should('contain', 'BRL');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"header-currency-field\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"header-currency-field\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:271:62)",
+                "diff": null
+              },
+              "uuid": "887ede0d-a747-4a79-b42d-0dd6643b6abf",
+              "parentUUID": "bca1ee07-479a-4d92-8cf5-c75eb1a89a9f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a19f7371-b506-4b3c-82b9-5cc6f5670c88",
+            "62fa0800-c80f-458b-a396-06c586066b4c",
+            "887ede0d-a747-4a79-b42d-0dd6643b6abf"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 32435,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e3eabc0f-bf05-4b2d-a651-6841d35d5847",
+          "title": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características:",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Um campo para adicionar o valor da despesa",
+              "fullTitle": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características: Um campo para adicionar o valor da despesa",
+              "timedOut": null,
+              "duration": 10809,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.VALUE_INPUT_TEST_ID).should('exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:307:52)",
+                "diff": null
+              },
+              "uuid": "417bafa2-c63e-4812-812c-4b0d63dfa9b8",
+              "parentUUID": "e3eabc0f-bf05-4b2d-a651-6841d35d5847",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Um campo para adicionar a descrição da despesa",
+              "fullTitle": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características: Um campo para adicionar a descrição da despesa",
+              "timedOut": null,
+              "duration": 10819,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.DESCRIPTION_INPUT_TEST_ID).should('exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"description-input\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"description-input\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:310:58)",
+                "diff": null
+              },
+              "uuid": "5763d962-8964-4e61-9ff4-1dee90849d5f",
+              "parentUUID": "e3eabc0f-bf05-4b2d-a651-6841d35d5847",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Um campo para selecionar em qual moeda será registrada a despesa",
+              "fullTitle": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características: Um campo para selecionar em qual moeda será registrada a despesa",
+              "timedOut": null,
+              "duration": 11019,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.CURRENCY_INPUT_TEST_ID).find('option').should('have.length', _constants.currenciesOptions.length);\ncy.wrap(_constants.currenciesOptions).each(currency => {\n  cy.getByTestId(_constants.CURRENCY_INPUT_TEST_ID).contains('option', currency).should('exist');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"currency-input\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"currency-input\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/e2e.js:124:63)",
+                "diff": null
+              },
+              "uuid": "842f6a15-442a-4ef8-97ae-99a54a7ab169",
+              "parentUUID": "e3eabc0f-bf05-4b2d-a651-6841d35d5847",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A chave currencies no estado global deve ser um array de siglas puxadas através de uma requisição à API",
+              "fullTitle": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características: A chave currencies no estado global deve ser um array de siglas puxadas através de uma requisição à API",
+              "timedOut": null,
+              "duration": 10970,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@mockFetch').should('be.calledWith', 'https://economia.awesomeapi.com.br/json/all');\ncy.window().its('store').invoke('getState').its('wallet.currencies').should('deep.equal', _constants.currenciesOptions);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: expected mockFetch to have been called with arguments \"https://economia.awesomeapi.com.br/json/all\", but it was never called",
+                "estack": "AssertionError: Timed out retrying after 10000ms: expected mockFetch to have been called with arguments \"https://economia.awesomeapi.com.br/json/all\", but it was never called\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:319:26)",
+                "diff": null
+              },
+              "uuid": "7e728d55-ce9e-4544-96fe-36aaeab02d2d",
+              "parentUUID": "e3eabc0f-bf05-4b2d-a651-6841d35d5847",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Um campo para selecionar qual método de pagamento será utilizado",
+              "fullTitle": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características: Um campo para selecionar qual método de pagamento será utilizado",
+              "timedOut": null,
+              "duration": 10966,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.METHOD_INPUT_TEST_ID).find('option').should('have.length', _constants.methodOptions.length);\ncy.wrap(_constants.methodOptions).each(method => {\n  cy.getByTestId(_constants.METHOD_INPUT_TEST_ID).contains('option', method).should('exist');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"method-input\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"method-input\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/e2e.js:124:63)",
+                "diff": null
+              },
+              "uuid": "35ab1813-e707-46a0-809b-7499351c8ba0",
+              "parentUUID": "e3eabc0f-bf05-4b2d-a651-6841d35d5847",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Um campo para selecionar uma categoria (tag) para a despesa.",
+              "fullTitle": "3 - Desenvolva um formulário para adicionar uma despesa contendo as seguintes características: Um campo para selecionar uma categoria (tag) para a despesa.",
+              "timedOut": null,
+              "duration": 11067,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.TAG_INPUT_TEST_ID).find('option').should('have.length', _constants.tagOptions.length);\ncy.wrap(_constants.tagOptions).each(tag => {\n  cy.getByTestId(_constants.TAG_INPUT_TEST_ID).contains('option', tag).should('exist');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"tag-input\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"tag-input\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/e2e.js:124:63)",
+                "diff": null
+              },
+              "uuid": "cf96e780-20b4-41a9-855b-90d518853f86",
+              "parentUUID": "e3eabc0f-bf05-4b2d-a651-6841d35d5847",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "417bafa2-c63e-4812-812c-4b0d63dfa9b8",
+            "5763d962-8964-4e61-9ff4-1dee90849d5f",
+            "842f6a15-442a-4ef8-97ae-99a54a7ab169",
+            "7e728d55-ce9e-4544-96fe-36aaeab02d2d",
+            "35ab1813-e707-46a0-809b-7499351c8ba0",
+            "cf96e780-20b4-41a9-855b-90d518853f86"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 65650,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "bbad2813-b9c8-4a11-82ff-1feb864c3a51",
+          "title": "4 - Salve todas as informações do formulário no estado global",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adiciona uma despesa e verifica se a soma de despesas do header foi atualizada e os inputs voltaram ao valor inicial",
+              "fullTitle": "4 - Salve todas as informações do formulário no estado global Adiciona uma despesa e verifica se a soma de despesas do header foi atualizada e os inputs voltaram ao valor inicial",
+              "timedOut": null,
+              "duration": 11189,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const expense = {\n  value: '11',\n  currency: 'USD',\n  method: 'Cartão de crédito',\n  tag: 'Lazer',\n  description: 'Onze dólares'\n};\n(0, _helperFunctions.addExpense)(expense);\ncy.getByTestId(_constants.TOTAL_FIELD_TEST_ID).should('have.text', '52.28');\ncy.getByTestId(_constants.VALUE_INPUT_TEST_ID).should('have.value', '');\ncy.getByTestId(_constants.DESCRIPTION_INPUT_TEST_ID).should('have.value', '');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/e2e.js:124:63)",
+                "diff": null
+              },
+              "uuid": "7fc3844f-a5e4-4996-b257-bcdd4f730547",
+              "parentUUID": "bbad2813-b9c8-4a11-82ff-1feb864c3a51",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Adiciona uma despesa e verifica se a despesa foi salva no estado global",
+              "fullTitle": "4 - Salve todas as informações do formulário no estado global Adiciona uma despesa e verifica se a despesa foi salva no estado global",
+              "timedOut": null,
+              "duration": 11053,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const expense = {\n  value: '11',\n  currency: 'USD',\n  method: 'Cartão de crédito',\n  tag: 'Lazer',\n  description: 'Onze dólares'\n};\n(0, _helperFunctions.addExpense)(expense);\ncy.window().its('store').invoke('getState').its('wallet.expenses').should('deep.equal', [_objectSpread(_objectSpread({}, expense), {}, {\n  id: 0,\n  exchangeRates: _data.mockData\n})]);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/e2e.js:124:63)",
+                "diff": null
+              },
+              "uuid": "a978fad8-556c-4db0-8170-405164804205",
+              "parentUUID": "bbad2813-b9c8-4a11-82ff-1feb864c3a51",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verifica se a API é chamada a cada vez que o botão 'Adicionar despesa' é clicado",
+              "fullTitle": "4 - Salve todas as informações do formulário no estado global Verifica se a API é chamada a cada vez que o botão 'Adicionar despesa' é clicado",
+              "timedOut": null,
+              "duration": 11011,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const expense = {\n  value: '11',\n  currency: 'USD',\n  method: 'Cartão de crédito',\n  tag: 'Lazer',\n  description: 'Onze dólares'\n};\ncy.get('@mockFetch').should('be.calledOnce');\n(0, _helperFunctions.addExpense)(expense);\ncy.get('@mockFetch').should('be.calledTwice');\n(0, _helperFunctions.addExpense)(expense);\ncy.get('@mockFetch').should('be.calledThrice');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: expected mockFetch to have been called exactly once, but it was never called",
+                "estack": "AssertionError: Timed out retrying after 10000ms: expected mockFetch to have been called exactly once, but it was never called\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:409:26)",
+                "diff": null
+              },
+              "uuid": "b507fa1b-00c9-416f-b51a-7f0a5514b42e",
+              "parentUUID": "bbad2813-b9c8-4a11-82ff-1feb864c3a51",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Adiciona duas despesas e verifica se o estado global e header foram atualizados",
+              "fullTitle": "4 - Salve todas as informações do formulário no estado global Adiciona duas despesas e verifica se o estado global e header foram atualizados",
+              "timedOut": null,
+              "duration": 11013,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const firstExpense = {\n  id: 0,\n  value: '11',\n  currency: 'USD',\n  method: 'Cartão de crédito',\n  tag: 'Lazer',\n  description: 'Onze dólares',\n  exchangeRates: _data.mockData\n};\n(0, _helperFunctions.addExpense)(firstExpense);\ncy.window().its('store').invoke('getState').its('wallet.expenses').should('deep.equal', [firstExpense]);\nconst secondExpense = {\n  id: 1,\n  value: '20',\n  currency: 'EUR',\n  method: 'Cartão de débito',\n  tag: 'Trabalho',\n  description: 'Vinte euros',\n  exchangeRates: _data.mockData\n};\n(0, _helperFunctions.addExpense)(secondExpense);\ncy.window().its('store').invoke('getState').its('wallet.expenses').should('deep.equal', [firstExpense, secondExpense]);\ncy.getByTestId(_constants.TOTAL_FIELD_TEST_ID).should('have.text', '154.82');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/e2e.js:124:63)",
+                "diff": null
+              },
+              "uuid": "58f64cef-2d2d-4f30-98e0-335851d22b1e",
+              "parentUUID": "bbad2813-b9c8-4a11-82ff-1feb864c3a51",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7fc3844f-a5e4-4996-b257-bcdd4f730547",
+            "a978fad8-556c-4db0-8170-405164804205",
+            "b507fa1b-00c9-416f-b51a-7f0a5514b42e",
+            "58f64cef-2d2d-4f30-98e0-335851d22b1e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 44266,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "7c0139a2-eda2-468d-88cb-2d62039b4f7b",
+          "title": "5 - Desenvolva testes para atingir 60% de cobertura total da aplicação",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cobertura de \"Statements\" total deverá ser maior ou igual a 60.",
+              "fullTitle": "5 - Desenvolva testes para atingir 60% de cobertura total da aplicação Cobertura de \"Statements\" total deverá ser maior ou igual a 60.",
+              "timedOut": null,
+              "duration": 3780,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.statements.pct', {\n  timeout: 0\n}).should('be.gte', 60.00);",
+              "err": {
+                "message": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:160502:78\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:11125:18)\n    at _drainQueueStep (http://localhost:3000/__cypress/runner/cypress_runner.js:7719:12)\n    at _drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:7712:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7728:5)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7598:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:458:8)\n\nFrom Node.js Internals:\n  Error: Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n  \n      at ChildProcess.exithandler (node:child_process:400:12)\n      at ChildProcess.emit (node:events:513:28)\n      at ChildProcess.emit (node:domain:489:12)\n      at maybeClose (node:internal/child_process:1093:16)\n      at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)",
+                "diff": null
+              },
+              "uuid": "ec28e7c7-6bff-42ef-b938-802c4231c28f",
+              "parentUUID": "7c0139a2-eda2-468d-88cb-2d62039b4f7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Functions\" total deverá ser maior ou igual a 60.",
+              "fullTitle": "5 - Desenvolva testes para atingir 60% de cobertura total da aplicação Cobertura de \"Functions\" total deverá ser maior ou igual a 60.",
+              "timedOut": null,
+              "duration": 1761,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.functions.pct', {\n  timeout: 0\n}).should('be.gte', 60.00);",
+              "err": {
+                "message": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:160502:78\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:11125:18)\n    at _drainQueueStep (http://localhost:3000/__cypress/runner/cypress_runner.js:7719:12)\n    at _drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:7712:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7728:5)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7598:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:463:8)\n\nFrom Node.js Internals:\n  Error: Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n  \n      at ChildProcess.exithandler (node:child_process:400:12)\n      at ChildProcess.emit (node:events:513:28)\n      at ChildProcess.emit (node:domain:489:12)\n      at maybeClose (node:internal/child_process:1093:16)\n      at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)",
+                "diff": null
+              },
+              "uuid": "76f87ae4-56e7-4f83-81b0-95cc601ddf9b",
+              "parentUUID": "7c0139a2-eda2-468d-88cb-2d62039b4f7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Branches\" total deverá ser maior ou igual a 60.",
+              "fullTitle": "5 - Desenvolva testes para atingir 60% de cobertura total da aplicação Cobertura de \"Branches\" total deverá ser maior ou igual a 60.",
+              "timedOut": null,
+              "duration": 1797,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.branches.pct', {\n  timeout: 0\n}).should('be.gte', 60.00);",
+              "err": {
+                "message": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:160502:78\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:11125:18)\n    at _drainQueueStep (http://localhost:3000/__cypress/runner/cypress_runner.js:7719:12)\n    at _drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:7712:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7728:5)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7598:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:468:8)\n\nFrom Node.js Internals:\n  Error: Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n  \n      at ChildProcess.exithandler (node:child_process:400:12)\n      at ChildProcess.emit (node:events:513:28)\n      at ChildProcess.emit (node:domain:489:12)\n      at maybeClose (node:internal/child_process:1093:16)\n      at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)",
+                "diff": null
+              },
+              "uuid": "b9ffad1e-7767-4579-b605-bf310d51d380",
+              "parentUUID": "7c0139a2-eda2-468d-88cb-2d62039b4f7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Lines\" total deverá ser maior ou igual a 60.",
+              "fullTitle": "5 - Desenvolva testes para atingir 60% de cobertura total da aplicação Cobertura de \"Lines\" total deverá ser maior ou igual a 60.",
+              "timedOut": null,
+              "duration": 1765,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.lines.pct', {\n  timeout: 0\n}).should('be.gte', 60.00);",
+              "err": {
+                "message": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:160502:78\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:11125:18)\n    at _drainQueueStep (http://localhost:3000/__cypress/runner/cypress_runner.js:7719:12)\n    at _drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:7712:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7728:5)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7598:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:473:8)\n\nFrom Node.js Internals:\n  Error: Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n  \n      at ChildProcess.exithandler (node:child_process:400:12)\n      at ChildProcess.emit (node:events:513:28)\n      at ChildProcess.emit (node:domain:489:12)\n      at maybeClose (node:internal/child_process:1093:16)\n      at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)",
+                "diff": null
+              },
+              "uuid": "dc57e6bb-66f1-4daf-8aa6-61f6ac5e817a",
+              "parentUUID": "7c0139a2-eda2-468d-88cb-2d62039b4f7b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ec28e7c7-6bff-42ef-b938-802c4231c28f",
+            "76f87ae4-56e7-4f83-81b0-95cc601ddf9b",
+            "b9ffad1e-7767-4579-b605-bf310d51d380",
+            "dc57e6bb-66f1-4daf-8aa6-61f6ac5e817a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9103,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "aed9649a-f496-4024-95b2-cf0d0d31cc6d",
+          "title": "6 - Desenvolva uma tabela com os gastos contendo as seguintes características:",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A tabela deve possuir um cabeçalho com os campos Descrição, Tag, Método de pagamento, Valor, Moeda, Câmbio utilizado, Valor convertido e Moeda de conversão",
+              "fullTitle": "6 - Desenvolva uma tabela com os gastos contendo as seguintes características: A tabela deve possuir um cabeçalho com os campos Descrição, Tag, Método de pagamento, Valor, Moeda, Câmbio utilizado, Valor convertido e Moeda de conversão",
+              "timedOut": null,
+              "duration": 11236,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('th').should('have.length', _constants.tableHeaderList.length);\ncy.wrap(_constants.tableHeaderList).each(header => {\n  cy.get('th').contains(header);\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `th`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `th`, but never found it.\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:511:18)",
+                "diff": null
+              },
+              "uuid": "0d8f63de-071b-4bb9-aee9-693493e0f60a",
+              "parentUUID": "aed9649a-f496-4024-95b2-cf0d0d31cc6d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0d8f63de-071b-4bb9-aee9-693493e0f60a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11236,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e6c466b7-9f8d-4a8a-89a4-a46e71dab8dd",
+          "title": "7 - Implemente a lógica para que a tabela seja alimentada pelo estado da aplicação",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A tabela deve ser alimentada pelo estado da aplicação, que estará disponível na chave expenses que vem do reducer wallet.",
+              "fullTitle": "7 - Implemente a lógica para que a tabela seja alimentada pelo estado da aplicação A tabela deve ser alimentada pelo estado da aplicação, que estará disponível na chave expenses que vem do reducer wallet.",
+              "timedOut": null,
+              "duration": 11089,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const expectedTableRows = [['Dez dólares', 'Trabalho', 'Cartão de débito', '10.00', 'Dólar Americano/Real Brasileiro', '4.75', '47.53', 'Real'], ['Cinco euros', 'Lazer', 'Cartão de crédito', '5.00', 'Euro/Real Brasileiro', '5.13', '25.63', 'Real']];\ncy.get('tbody tr').should('have.length', expectedTableRows.length);\ncy.get('tbody tr').each((row, index) => {\n  cy.wrap(expectedTableRows[index]).each(expectedValue => {\n    cy.get(row).find('td').contains(expectedValue);\n  });\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `7 - Implemente a lógica par...`",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `7 - Implemente a lógica par...`\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/e2e.js:124:63)",
+                "diff": null
+              },
+              "uuid": "30018aa8-f835-4560-a5a0-e995e092fba4",
+              "parentUUID": "e6c466b7-9f8d-4a8a-89a4-a46e71dab8dd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "30018aa8-f835-4560-a5a0-e995e092fba4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11089,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "577834e6-c768-4652-b73f-c40a2ee74ac5",
+          "title": "8 - Crie um botão para deletar uma despesa da tabela contendo as seguintes características:",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "O botão deve estar dentro do último item da linha da tabela e deve possuir `data-testid=\"delete-btn\"`",
+              "fullTitle": "8 - Crie um botão para deletar uma despesa da tabela contendo as seguintes características: O botão deve estar dentro do último item da linha da tabela e deve possuir `data-testid=\"delete-btn\"`",
+              "timedOut": null,
+              "duration": 11029,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('tbody tr').first().find('td').last().find(`button[data-testid=\"${_constants.BTN_DELETE_TEST_ID}\"]`).should('exist');\ncy.getByTestId(_constants.BTN_DELETE_TEST_ID).should('have.length', 2);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `8 - Crie um botão para dele...`",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `8 - Crie um botão para dele...`\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/e2e.js:124:63)",
+                "diff": null
+              },
+              "uuid": "051261f0-6377-4e97-9202-291bfd927477",
+              "parentUUID": "577834e6-c768-4652-b73f-c40a2ee74ac5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ao ser clicado, o botão deleta a linha da tabela, alterando o estado global.",
+              "fullTitle": "8 - Crie um botão para deletar uma despesa da tabela contendo as seguintes características: Ao ser clicado, o botão deleta a linha da tabela, alterando o estado global.",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const expectedTableRow = ['Cinco euros', 'Lazer', 'Cartão de crédito', '5.00', 'Euro/Real Brasileiro', '5.13', '25.63', 'Real'];\ncy.getByTestId(_constants.BTN_DELETE_TEST_ID).first().click().should('not.exist');\nconst deleteBtn = 1;\ncy.get('tbody tr td').should('have.length', expectedTableRow.length + deleteBtn);\ncy.wrap(expectedTableRow).each(expectedValue => {\n  cy.get('tbody tr td').contains(expectedValue);\n});\nconst expectedExpenses = [_objectSpread(_objectSpread({}, _constants.initialExpenses[1]), {}, {\n  id: 1,\n  exchangeRates: _data.mockData\n})];\ncy.window().its('store').invoke('getState').its('wallet.expenses').should('deep.equal', expectedExpenses);",
+              "err": {},
+              "uuid": "f3f21c51-f622-4257-8822-aa100fc22caf",
+              "parentUUID": "577834e6-c768-4652-b73f-c40a2ee74ac5",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Ao clicar no botão para remover uma despesa, o valor correspondente deve ser subtraído e a despesa total deve ser atualizada no header",
+              "fullTitle": "8 - Crie um botão para deletar uma despesa da tabela contendo as seguintes características: Ao clicar no botão para remover uma despesa, o valor correspondente deve ser subtraído e a despesa total deve ser atualizada no header",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.TOTAL_FIELD_TEST_ID).should('have.text', '73.16');\ncy.getByTestId(_constants.BTN_DELETE_TEST_ID).first().click();\ncy.getByTestId(_constants.TOTAL_FIELD_TEST_ID).should('have.text', '25.63');\ncy.getByTestId(_constants.BTN_DELETE_TEST_ID).first().click();\ncy.getByTestId(_constants.TOTAL_FIELD_TEST_ID).should('have.text', '0.00');",
+              "err": {},
+              "uuid": "7e6b9ad0-814c-460f-9571-19f57e47a191",
+              "parentUUID": "577834e6-c768-4652-b73f-c40a2ee74ac5",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "051261f0-6377-4e97-9202-291bfd927477"
+          ],
+          "pending": [],
+          "skipped": [
+            "f3f21c51-f622-4257-8822-aa100fc22caf",
+            "7e6b9ad0-814c-460f-9571-19f57e47a191"
+          ],
+          "duration": 11029,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "799187a8-1d6c-44b4-b196-25001d23950c",
+          "title": "9 - Crie um botão para editar uma despesa da tabela contendo as seguintes características:",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "O botão deve estar dentro do último item da linha da tabela e deve possuir `data-testid=\"edit-btn\"`",
+              "fullTitle": "9 - Crie um botão para editar uma despesa da tabela contendo as seguintes características: O botão deve estar dentro do último item da linha da tabela e deve possuir `data-testid=\"edit-btn\"`",
+              "timedOut": null,
+              "duration": 10980,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('tbody tr').first().find('td').last().find(`button[data-testid=\"${_constants.BTN_EDIT_TEST_ID}\"]`).should('exist');\ncy.getByTestId(_constants.BTN_EDIT_TEST_ID).should('have.length', 2);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `9 - Crie um botão para edit...`",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[data-testid=\"value-input\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `9 - Crie um botão para edit...`\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/support/e2e.js:124:63)",
+                "diff": null
+              },
+              "uuid": "92dda394-dd22-4ab1-b80e-ca96d43ade54",
+              "parentUUID": "799187a8-1d6c-44b4-b196-25001d23950c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "O botão habilita um formulário para editar a linha da tabela ao ser clicado, após clicar em \"Editar despesa\" a despesa é atualizada e atualiza a soma de despesas no header.",
+              "fullTitle": "9 - Crie um botão para editar uma despesa da tabela contendo as seguintes características: O botão habilita um formulário para editar a linha da tabela ao ser clicado, após clicar em \"Editar despesa\" a despesa é atualizada e atualiza a soma de despesas no header.",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getByTestId(_constants.BTN_EDIT_TEST_ID).first().click();\ncy.contains(/Adicionar despesa/i).should('not.exist');\ncy.contains(/Editar despesa/i).should('exist');\n(0, _helperFunctions.editExpense)({\n  value: '200',\n  currency: 'CAD',\n  method: 'Dinheiro',\n  tag: 'Saúde',\n  description: 'Duzentos dólares canadenses'\n});\nconst expectedTableRow = ['Duzentos dólares canadenses', 'Saúde', 'Dinheiro', '200.00', 'Dólar Canadense/Real Brasileiro', '3.76', '751.18', 'Real'];\nconst deleteBtn = 1;\ncy.get('tbody tr').first().find('td').should('have.length', expectedTableRow.length + deleteBtn);\ncy.wrap(expectedTableRow).each(expectedValue => {\n  cy.get('tbody tr').first().find('td').contains(expectedValue);\n});\ncy.getByTestId(_constants.TOTAL_FIELD_TEST_ID).should('have.text', '776.81');\nconst expectedExpenses = [{\n  id: 0,\n  value: '200',\n  currency: 'CAD',\n  method: 'Dinheiro',\n  tag: 'Saúde',\n  description: 'Duzentos dólares canadenses',\n  exchangeRates: _data.mockData\n}, _objectSpread(_objectSpread({}, _constants.initialExpenses[1]), {}, {\n  id: 1,\n  exchangeRates: _data.mockData\n})];\ncy.window().its('store').invoke('getState').its('wallet.expenses').should('deep.equal', expectedExpenses);",
+              "err": {},
+              "uuid": "8318fb56-1d01-4293-bea7-594032727eec",
+              "parentUUID": "799187a8-1d6c-44b4-b196-25001d23950c",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "92dda394-dd22-4ab1-b80e-ca96d43ade54"
+          ],
+          "pending": [],
+          "skipped": [
+            "8318fb56-1d01-4293-bea7-594032727eec"
+          ],
+          "duration": 10980,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "ce861c37-b1fb-4763-8f43-b5377acf886a",
+          "title": "10 - Desenvolva testes para atingir 90% de cobertura total da aplicação",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cobertura de \"Statements\" total deverá ser maior ou igual a 90.",
+              "fullTitle": "10 - Desenvolva testes para atingir 90% de cobertura total da aplicação Cobertura de \"Statements\" total deverá ser maior ou igual a 90.",
+              "timedOut": null,
+              "duration": 1798,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.statements.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);",
+              "err": {
+                "message": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:160502:78\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:11125:18)\n    at _drainQueueStep (http://localhost:3000/__cypress/runner/cypress_runner.js:7719:12)\n    at _drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:7712:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7728:5)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7598:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:720:8)\n\nFrom Node.js Internals:\n  Error: Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n  \n      at ChildProcess.exithandler (node:child_process:400:12)\n      at ChildProcess.emit (node:events:513:28)\n      at ChildProcess.emit (node:domain:489:12)\n      at maybeClose (node:internal/child_process:1093:16)\n      at Socket.<anonymous> (node:internal/child_process:451:11)\n      at Socket.emit (node:events:513:28)\n      at Socket.emit (node:domain:489:12)\n      at Pipe.<anonymous> (node:net:757:14)",
+                "diff": null
+              },
+              "uuid": "5009b305-5517-4c0b-ba80-6ef8ce495fde",
+              "parentUUID": "ce861c37-b1fb-4763-8f43-b5377acf886a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Functions\" total deverá ser maior ou igual a 90.",
+              "fullTitle": "10 - Desenvolva testes para atingir 90% de cobertura total da aplicação Cobertura de \"Functions\" total deverá ser maior ou igual a 90.",
+              "timedOut": null,
+              "duration": 1758,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.functions.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);",
+              "err": {
+                "message": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:160502:78\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:11125:18)\n    at _drainQueueStep (http://localhost:3000/__cypress/runner/cypress_runner.js:7719:12)\n    at _drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:7712:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7728:5)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7598:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:725:8)\n\nFrom Node.js Internals:\n  Error: Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n  \n      at ChildProcess.exithandler (node:child_process:400:12)\n      at ChildProcess.emit (node:events:513:28)\n      at ChildProcess.emit (node:domain:489:12)\n      at maybeClose (node:internal/child_process:1093:16)\n      at Socket.<anonymous> (node:internal/child_process:451:11)\n      at Socket.emit (node:events:513:28)\n      at Socket.emit (node:domain:489:12)\n      at Pipe.<anonymous> (node:net:757:14)",
+                "diff": null
+              },
+              "uuid": "fd07b6e7-c02a-47c5-a9e0-332117f6b9ce",
+              "parentUUID": "ce861c37-b1fb-4763-8f43-b5377acf886a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Branches\" total deverá ser maior ou igual a 90.",
+              "fullTitle": "10 - Desenvolva testes para atingir 90% de cobertura total da aplicação Cobertura de \"Branches\" total deverá ser maior ou igual a 90.",
+              "timedOut": null,
+              "duration": 1859,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.branches.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);",
+              "err": {
+                "message": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:160502:78\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:11125:18)\n    at _drainQueueStep (http://localhost:3000/__cypress/runner/cypress_runner.js:7719:12)\n    at _drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:7712:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7728:5)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7598:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:730:8)\n\nFrom Node.js Internals:\n  Error: Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n  \n      at ChildProcess.exithandler (node:child_process:400:12)\n      at ChildProcess.emit (node:events:513:28)\n      at ChildProcess.emit (node:domain:489:12)\n      at maybeClose (node:internal/child_process:1093:16)\n      at Socket.<anonymous> (node:internal/child_process:451:11)\n      at Socket.emit (node:events:513:28)\n      at Socket.emit (node:domain:489:12)\n      at Pipe.<anonymous> (node:net:757:14)",
+                "diff": null
+              },
+              "uuid": "a859146c-7597-4ceb-b497-341913e9ac20",
+              "parentUUID": "ce861c37-b1fb-4763-8f43-b5377acf886a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cobertura de \"Lines\" total deverá ser maior ou igual a 90.",
+              "fullTitle": "10 - Desenvolva testes para atingir 90% de cobertura total da aplicação Cobertura de \"Lines\" total deverá ser maior ou igual a 90.",
+              "timedOut": null,
+              "duration": 1806,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', (0, _getId.getId)()).its('total.lines.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);",
+              "err": {
+                "message": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task",
+                "estack": "CypressError: `cy.task('getCoverage')` failed with the following error:\n\n> Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n\n\nhttps://on.cypress.io/api/task\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:160502:78\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:13012:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:10947:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:11004:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:11049:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:11125:18)\n    at _drainQueueStep (http://localhost:3000/__cypress/runner/cypress_runner.js:7719:12)\n    at _drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:7712:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7728:5)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:7598:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/e2e/_requirements/00.RunAll.cy.js:735:8)\n\nFrom Node.js Internals:\n  Error: Command failed: npm run test-coverage -- --coverageReporters=\"json-summary\" --testFailureExitCode=0\n  \n      at ChildProcess.exithandler (node:child_process:400:12)\n      at ChildProcess.emit (node:events:513:28)\n      at ChildProcess.emit (node:domain:489:12)\n      at maybeClose (node:internal/child_process:1093:16)\n      at Socket.<anonymous> (node:internal/child_process:451:11)\n      at Socket.emit (node:events:513:28)\n      at Socket.emit (node:domain:489:12)\n      at Pipe.<anonymous> (node:net:757:14)",
+                "diff": null
+              },
+              "uuid": "16e4f1ff-89e5-409e-aba7-ee53ec004b46",
+              "parentUUID": "ce861c37-b1fb-4763-8f43-b5377acf886a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5009b305-5517-4c0b-ba80-6ef8ce495fde",
+            "fd07b6e7-c02a-47c5-a9e0-332117f6b9ce",
+            "a859146c-7597-4ceb-b497-341913e9ac20",
+            "16e4f1ff-89e5-409e-aba7-ee53ec004b46"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7221,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

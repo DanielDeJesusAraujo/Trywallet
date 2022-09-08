@@ -1,0 +1,37 @@
+.main-login {
+  display: flex;
+  align-items: center;
+  background-image: url('../imgs/background_login.webp');
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+
+.logo-div-login {
+  background-image: url('../imgs/logo-removebg-preview.png');
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  background-image: linear-gradient(-90deg, #34A8D5, rgba(255, 255, 255, 0.897));
+  height: 100vh;
+  width: 50vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-login h1 {
+  color: black;
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Roboto Flex', sans-serif;
+}
