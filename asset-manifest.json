@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Trywallet/static/css/main.76906a26.css",
-    "main.js": "/Trywallet/static/js/main.1e3405a8.js",
-    "static/media/background_login.webp": "/Trywallet/static/media/background_login.138d7367cf6cbd3c63b2.webp",
-    "static/media/logo-wallet-removebg-preview.png": "/Trywallet/static/media/logo-wallet-removebg-preview.037fe75fd1e4e3aebffd.png",
-    "static/media/logo-removebg-preview.png": "/Trywallet/static/media/logo-removebg-preview.9071544381d6448710da.png",
-    "index.html": "/Trywallet/index.html",
-    "main.76906a26.css.map": "/Trywallet/static/css/main.76906a26.css.map",
-    "main.1e3405a8.js.map": "/Trywallet/static/js/main.1e3405a8.js.map"
+    "main.css": "/Trywallet/build/static/static/css/main.bbc77050.css",
+    "main.js": "/Trywallet/build/static/static/js/main.1e3405a8.js",
+    "static/media/background_login.webp": "/Trywallet/build/static/static/media/background_login.138d7367cf6cbd3c63b2.webp",
+    "static/media/logo-wallet-removebg-preview.png": "/Trywallet/build/static/static/media/logo-wallet-removebg-preview.037fe75fd1e4e3aebffd.png",
+    "static/media/logo-removebg-preview.png": "/Trywallet/build/static/static/media/logo-removebg-preview.9071544381d6448710da.png",
+    "index.html": "/Trywallet/build/static/index.html",
+    "main.bbc77050.css.map": "/Trywallet/build/static/static/css/main.bbc77050.css.map",
+    "main.1e3405a8.js.map": "/Trywallet/build/static/static/js/main.1e3405a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.76906a26.css",
+    "static/css/main.bbc77050.css",
     "static/js/main.1e3405a8.js"
   ]
 }
