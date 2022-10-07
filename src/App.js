@@ -8,7 +8,7 @@ function App() {
     <div>
       <Route
         exact
-        path="/"
+        path="/Trywallet"
         render={ (props) => <Loging props={ { ...props } } /> }
       />
 
