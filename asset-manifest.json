@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Trywallet/static/css/main.76906a26.css",
-    "main.js": "/Trywallet/static/js/main.1e3405a8.js",
+    "main.js": "/Trywallet/static/js/main.66ce92cf.js",
     "static/media/background_login.webp": "/Trywallet/static/media/background_login.138d7367cf6cbd3c63b2.webp",
     "static/media/logo-wallet-removebg-preview.png": "/Trywallet/static/media/logo-wallet-removebg-preview.037fe75fd1e4e3aebffd.png",
     "static/media/logo-removebg-preview.png": "/Trywallet/static/media/logo-removebg-preview.9071544381d6448710da.png",
     "index.html": "/Trywallet/index.html",
     "main.76906a26.css.map": "/Trywallet/static/css/main.76906a26.css.map",
-    "main.1e3405a8.js.map": "/Trywallet/static/js/main.1e3405a8.js.map"
+    "main.66ce92cf.js.map": "/Trywallet/static/js/main.66ce92cf.js.map"
   },
   "entrypoints": [
     "static/css/main.76906a26.css",
-    "static/js/main.1e3405a8.js"
+    "static/js/main.66ce92cf.js"
   ]
 }
